@@ -3,6 +3,7 @@ from flask_login import UserMixin
 
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    source = db.Column(db.String(10000))
     name = db.Column(db.String(10000))
     price = db.Column(db.Double(20, 2))
 
