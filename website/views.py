@@ -8,6 +8,7 @@ views = Blueprint('views', __name__)
 @views.route('/', methods=["GET", "POST"])
 @login_required
 def home():
+    itemObjects = []
     if request.method == "POST":
         search = request.form.get("search")
 
